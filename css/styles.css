@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1f1f29;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.container {
+  background: #ecf1ff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff9cff;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+img {
+  width: 5rem;
+}
+
+h1 {
+  color: #000000;
+  background-color: #fff240;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  display: inline-block;
+  padding: 8px 24px;
+}
+h2 {
+  font-size: 50px;
+  color: #fffcfd;
+  border-bottom: 2px solid #ffdba1;
+  padding-bottom: 5px;
+}
+span {
+  font-size: 20px;
+  color: #fffcfd;
+  border-bottom: 2px solid #ffdba1;
+  padding-bottom: 5px;
+}
+
+.exercicio {
+  background: #2d3f77;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border-left: 3px solid #e94560;
+}
+.codigo {
+  background: #2c3e50;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  overflow-x: auto;
+  margin: 10px 0;
+  border: 1px solid #7ebeff;
+}
+.resultado {
+  background: #27ae60;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.desafio {
+  background: #ad4475;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+button {
+  background: #fa678c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+button:hover {
+  background: #fd59ab;
+}
+.solucao {
+  display: none;
+  background: #a5cef8;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

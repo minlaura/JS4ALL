@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS4ALL - Exercícios JavaScript</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" type="image.png" href="img/javascript_11230575.png" />
+  </head>
+
+  <body>
+    <header>
+      <img src="img/javascript_11230575.png" alt="jsicon" />
+      <h1>JS4All</h1>
+    </header>
+    <h2>Js4all: Exercícios em JavaScript para todos!</h2>
+    <div class="container">
+      <div class="exercicio">
+        <h3>Exercício 1: Contar Vogais e Consoantes</h3>
+
+        <p>
+          <strong>Objetivo:</strong> Criar um objeto que conte quantas vogais e
+          consoantes tem uma palavra.
+        </p>
+        <div class="codigo">const palavra = "Cachorro";</div>
+
+        <div class="resultado">Resultado esperado: {3 "C", 2 "O" e 2 "R"}</div>
+
+        <div class="desafio">
+          Desafio extra: Tente modificar o código para ignorar maiúsculas e
+          minúsculas!
+        </div>
+
+        <button onclick="mostrarSolucao('sol1')">Ver Solução</button>
+        <div id="sol1" class="solucao">
+          <div class="codigo">
+            const palavra = "Cachorro".toLowerCase();<br />
+            let letras = {};<br />
+            for (let i = 0; i < palavra.length; i++) {<br />
+            if (letras[palavra[i]]) {<br />
+            letras[palavra[i]]++;<br />
+            } else {<br />
+            letras[palavra[i]] = 1;<br />
+            }<br />
+            }<br />
+            console.log(palavra);<br />
+            console.log(letras);<br />
+            <span><br />Explicação</span>
+            <li>
+              const palavra = "Cachorro".toLowerCase(); <br />
+              ➜ Transforma a palavra "Cachorro" em "cachorro" (tudo
+              minúsculo).<br />
+              letras = {}; <br />
+              ➜ Cria um objeto vazio que vai guardar as letras e quantas vezes
+              cada uma aparece.<br />
+              for (let i = 0; i < palavra.length; i++) <br />
+              ➜ Vai percorrer cada letra da palavra, uma por uma.<br />
+              Dentro do for, o código verifica:<br />
+              Se a letra já existe no objeto letras, soma +1 na contagem.<br />
+              Se ainda não existe, cria a chave com valor 1.<br />
+              console.log(palavra); <br />
+              ➜ Mostra a palavra "cachorro".<br />
+              console.log(letras); <br />
+              ➜ Mostra o resultado final.
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="exercicio">
+        <h3>Exercício 2: Tabuada em JavaScript</h3>
+
+        <p>
+          <strong>Objetivo:</strong> Crie um programa em JavaScript que imprima
+          a tabuada de um número específico, de 0 até 10.
+        </p>
+        <div class="codigo">const multiplicador = "7";</div>
+
+        <div class="resultado">
+          Resultado esperado: 7, 14, 21, 28, 35, 42, 49, 56, 63, 70.
+        </div>
+
+        <button onclick="mostrarSolucao('sol2')">Ver Solução</button>
+        <div id="sol2" class="solucao">
+          <div class="codigo">
+            const multiplicador = 7;<br />
+            for (let i = 0; i <= 10; i++) {<br />
+            const calc = multiplicador * i;<br />
+            console.log(`${multiplicador} x ${i} = ${calc}`);<br />
+            }
+
+            <span><br />Explicação</span>
+
+            <li>
+              for (let i = 0; i <= 10; i++) <br />
+              ➜ Esse comando vai repetir o que está dentro dele 11 vezes,
+              começando no 0 até o 10.<br />
+              ➜ O i é o número que vai mudando (0, 1, 2, 3, ... até 10).<br />
+              const calc = multiplicador * i;<br />
+              ➜ Aqui ele multiplica o número da tabuada (ex: 7) pelo valor de
+              i.<br />
+              ➜ Guarda o resultado na variável calc.<br />
+              console.log(...)<br />
+              ➜ Mostra a multiplicação no console, tipo:
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="exercicio">
+        <h3>Exercício 3: Calculadora IMC</h3>
+
+        <p>
+          <strong>Objetivo:</strong> Crie um programa em JavaScript que imprima
+          3 níveis de IMC = Índice de Massa Corporal, seguindo a fórmula.
+        </p>
+        <div class="codigo">const imc = peso / (altura * altura)</div>
+
+        <div class="resultado">
+          Resultado esperado:<br />
+          <= 18.5 → Abaixo do peso<br />
+          18.5 – 24.9 → Peso normal<br />
+          >= 25 → Sobrepeso
+        </div>
+
+        <button onclick="mostrarSolucao('sol3')">Ver Solução</button>
+        <div id="sol3" class="solucao">
+          <div class="codigo">
+            const peso = 55;<br />
+            const altura = 1.7;<br />
+            const imc = Number((peso / (altura * altura)).toFixed(2));<br />
+            console.log(imc);<br />
+            switch (true) {<br />
+            case imc < 18.5:<br />
+            console.log("Você está abaixo do peso!");<br />
+            break;<br />
+            case imc >= 18.5 && imc <= 24.9:<br />
+            console.log("Seu peso está normal!");<br />
+            break;<br />
+            case imc >= 25:<br />
+            console.log("Sobrepeso!");<br />
+            }
+
+            <span><br />Explicação</span>
+
+            <li>
+              peso / (altura * altura) = 55 ÷ (1.7 × 1.7) = 19.03<br />
+              .toFixed(2) = arredonda para 2 casas decimais<br />
+              Number() = garante que seja um número<br />
+              switch normalmente compara valores exatos: switch(cor)<br />
+              Mas aqui queremos testar condições (maior que, menor que)<br />
+              switch (true) significa: "execute o primeiro case que for
+              verdadeiro"<br />
+              Exemplo: "19.03 é menor que 18.5?" → NÃO?<br />
+              Ação: Pula para o próximo case.<br />
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
